@@ -360,7 +360,7 @@ config_caddy_docker(){
     install_dependencies
     curl -L http://raw.githubusercontent.com/lcboy/ssrgood/2019/Docker/Caddy_V2ray/Caddyfile  >  Caddyfile
     echo "Writing docker-compose.yml"
-    curl -L https://github.com/lcboy/ssrgood/2019/Docker/Caddy_V2ray/docker-compose.yml  >  docker-compose.yml
+    curl -L http://raw.githubusercontent.com/lcboy/ssrgood/2019/Docker/Caddy_V2ray/docker-compose.yml  >  docker-compose.yml
     sed -i "s|node_id:.*|node_id: ${ssrpanel_node_id}|"  ./docker-compose.yml
     sed -i "s|LDNS:.*|LDNS: '${LDNS}'|"  ./docker-compose.yml
     sed -i "s|sspanel_url:.*|sspanel_url: '${ssrpanel_url}'|"  ./docker-compose.yml
